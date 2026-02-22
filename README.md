@@ -49,7 +49,7 @@ Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab
 3.  Complete the setup wizard.
 
 ### 3.2 Interface Verification
-Verify that the SDN automation has mapped the interfaces correctly:
+Verify that the automation has mapped the interfaces correctly:
 * **Port 1 (WAN):** Connected to the Public Subnet (Gateway for Internet).
 * **Port 2 (LAN):** Connected to the Private Subnet (Gateway for TGW traffic).
 
