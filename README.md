@@ -70,7 +70,12 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
     * **KeyPair:** Select your existing SSH key created in **Section 1.2** above.
     * **ClientIP:** Enter your local public IP (e.g., `x.x.x.x/32`) to whitelist your access. You can use whatismyip.com or ip.me to find out the local public IP.
     * **LicenseType:** Select `PAYG` (Pay-As-You-Go). Leave it as it is. 
-6.  Click **Next** through the screens, and then **Submit**.
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft1.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft2.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft3.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft4.jpg width="500"/>
+
+5.  Click **Next** through the screens, and then **Submit**.
 
 ### 2.2 Accessing the Resources
 Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab to find your credentials:
