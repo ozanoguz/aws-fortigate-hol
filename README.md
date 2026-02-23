@@ -17,21 +17,52 @@ The CloudFormation Template (CFT) automates a comprehensive Hub & Spoke environm
 
 ---
 
-## 🚀 Section 1: Login AWS Console
+## 🚀 Section 1: Lab Preparation
 
+### 1.1 Access AWS Console
+
+Log in to the AWS console using the link below. You can use k8s_studentxx as username, password will be provided during the session.
+
+[Access AWS Management Console](https://174296440058.signin.aws.amazon.com/console)
+
+### 1.2 Create SSH Key Pair
+
+You must create an SSH key pair to securely access the EC2 instances (Spoke VMs) deployed in this lab.
+
+1. After logging in to the AWS Management Console**, ensure you are in the **Cape Town region (af-south-1)**.
+2. Search for "key pairs" in the top search box. Click "Key pairs" under search results.
+3. Click **Create key pair**.
+4. Configure the key pair:
+   * **Name:** `Student01-key` (or use your assigned student ID)
+   * **Key pair type:** RSA
+   * **Private key file format:** `.pem`
+5. Click **Create key pair**.
+6. The `.pem` file will download automatically. **Store it securely**—this file cannot be downloaded again.
+
+> 🔐 **Important:** You will select this key pair later during the CloudFormation deployment.  
+> 🖥️ **Windows users:** You may need PuTTY or Windows OpenSSH to use the `.pem` file.  
+> 🐧 **macOS/Linux users:** Restrict permissions before use:
+> ```bash
+> chmod 400 Student01-key.pem
+> ```
 
 ## 🚀 Section 2: Deployment & Provisioning
 
-### 2.1 Launch the CloudFormation Stack
-1.  Log in to your **AWS Management Console**.
-2.  Navigate to **CloudFormation** > **Create stack** > **With new resources**.
-3.  Upload the file: `Cape_Town_HoL_CFT v2.yaml`.
+### 2.1 Deploying Lab Environment
+1.  Log in to your **AWS Management Console** first.
+2.  Click to **Launch Stack** button below. This will redirect you to the AWS CloudFormation page.
+
+| **Description** | **1-Button Deployment** |
+|-----------------| ------------------------|
+| **FortiGate-VM Hub & Spoke Lab**<br> | [![Launch Stack](https://github.com/40net-cloud/fortinet-aws-solutions/blob/master/FortiGate/Active-Passive-Multi-Zone/images/aws_cft_image.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://ftnt-cfts.s3.amazonaws.com/training/Cape_Town_HoL_CFT.yaml&stackName=FortiGate-Hub-and-Spoke-Lab) |
+
+3.  Select the AWS Cape Town region (af-south-1) from the top-right menu.
 4.  **Parameters to Configure:**
     * **Stack Name:** Enter your student-ID `Student01`
-    * **KeyPair:** Select your existing SSH key.
-    * **ClientIP:** Enter your local public IP (e.g., `x.x.x.x/32`) to whitelist your access. Use whatismyip.com or ip.me to find out.
-    * **LicenseType:** Select `PAYG` (Pay-As-You-Go).
-5.  Click **Next** through the screens and then **Submit**.
+    * **KeyPair:** Select your existing SSH key created in **Section 1.2** above.
+    * **ClientIP:** Enter your local public IP (e.g., `x.x.x.x/32`) to whitelist your access. You can use whatismyip.com or ip.me to find out the local public IP.
+    * **LicenseType:** Select `PAYG` (Pay-As-You-Go). Leave it as it is. 
+6.  Click **Next** through the screens, and then **Submit**.
 
 ### 2.2 Accessing the Resources
 Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab to find your credentials:
