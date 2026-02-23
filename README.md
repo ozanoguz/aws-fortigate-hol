@@ -94,7 +94,7 @@ Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab
 1.  Open the **FGTURL** in your browser.
 2.  Log in using the Instance ID. You will be prompted to set a new password.
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtprompt.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtprompt.jpg width="500"/>
 
 3.  Complete the setup wizard.
 
@@ -103,7 +103,7 @@ Verify that the automation has mapped the interfaces correctly:
 * **Port 1 (WAN):** Connected to the Public Subnet (Gateway for Internet).
 * **Port 2 (LAN):** Connected to the Private Subnet (Gateway for TGW traffic).
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtinterface.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtinterface.jpg width="600"/>
 
 ---
 
