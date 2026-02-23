@@ -75,10 +75,13 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft3.jpg width="400"/>
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft4.jpg width="500"/>
 
-5.  Click **Next** through the screens, and then **Submit**.
+5.  Click **Next** through the screens, and then **Create Stack**.
 
 ### 2.2 Accessing the Resources
 Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab to find your credentials:
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cftcomplete.jpg width="400"/>
+
 * 🌐 **FGTURL:** The management link for the FortiGate GUI.
 * 👤 **Username:** `admin`
 * 🔑 **Password:** Your **Instance ID** (e.g., `i-0a1b2c3d4e5f6g7h8`).
