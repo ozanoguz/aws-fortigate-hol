@@ -35,15 +35,17 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
 
 2. Search for "key pairs" in the top search box. Click "Key pairs" under search results.
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/selectkeypairs.jpg width="300"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/selectkeypairs.jpg width="400"/>
 
-3. Click **Create key pair**.
-4. Configure the key pair:
+3. Configure the key pair:
    * **Name:** `Student01-key` (or use your assigned student ID)
    * **Key pair type:** RSA
    * **Private key file format:** `.pem`
-5. Click **Create key pair**.
-6. The `.pem` file will download automatically. **Store it securely**—this file cannot be downloaded again.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/createkeypair.jpg width="500"/>
+   
+4. Click **Create key pair**.
+5. The `.pem` file will download automatically. **Store it securely**—this file cannot be downloaded again.
 
 > 🔐 **Important:** You will select this key pair later during the CloudFormation deployment.  
 > 🖥️ **Windows users:** You may need PuTTY or Windows OpenSSH to use the `.pem` file.  
