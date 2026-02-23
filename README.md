@@ -80,7 +80,7 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
 ### 2.2 Accessing the Resources
 Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab to find your credentials:
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cftcomplete.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cftcomplete.jpg width="500"/>
 
 * 🌐 **FGTURL:** The management link for the FortiGate GUI.
 * 👤 **Username:** `admin`
