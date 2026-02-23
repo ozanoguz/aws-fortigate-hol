@@ -94,7 +94,7 @@ Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab
 1.  Open the **FGTURL** in your browser.
 2.  Log in using the Instance ID. You will be prompted to set a new password.
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtprompt.jpg width="500"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtprompt.jpg width="400"/>
 
 3.  Complete the setup wizard.
 
