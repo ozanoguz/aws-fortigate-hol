@@ -103,6 +103,8 @@ Verify that the automation has mapped the interfaces correctly:
 * **Port 1 (WAN):** Connected to the Public Subnet (Gateway for Internet).
 * **Port 2 (LAN):** Connected to the Private Subnet (Gateway for TGW traffic).
 
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtinterface.jpg width="400"/>
+
 ---
 
 ## 🧪 Section 4: Traffic Inspection Lab
