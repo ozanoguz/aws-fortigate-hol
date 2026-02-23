@@ -30,7 +30,13 @@ Log in to the AWS console using the link below. You can use k8s_studentxx as use
 You must create an SSH key pair to securely access the EC2 instances (Spoke VMs) deployed in this lab.
 
 1. After logging in to the AWS Management Console**, ensure you are in the **Cape Town region (af-south-1)**.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/selectregion.jpg width="300"/>
+
 2. Search for "key pairs" in the top search box. Click "Key pairs" under search results.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/selectkeypairs.jpg width="300"/>
+
 3. Click **Create key pair**.
 4. Configure the key pair:
    * **Name:** `Student01-key` (or use your assigned student ID)
