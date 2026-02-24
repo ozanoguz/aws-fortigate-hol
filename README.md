@@ -64,12 +64,12 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
 |-----------------|--------------------------|
 | **FortiGate-VM Hub & Spoke Lab** | [![Launch Stack](https://github.com/40net-cloud/fortinet-aws-solutions/blob/master/FortiGate/Active-Passive-Multi-Zone/images/aws_cft_image.png)](https://console.aws.amazon.com/cloudformation/home?region=af-south-1#/stacks/create/review?templateURL=https://ftnt-cfts.s3.amazonaws.com/training/Cape_Town_HoL_CFT.yaml&stackName=FortiGate-Hub-and-Spoke-Lab) |
 
-3.  Select the AWS Cape Town region (af-south-1) from the top-right menu.
+3.  AWS Cape Town region (af-south-1) is automatically selected for you.
 4.  **Parameters to Configure:**
     * **Stack Name:** Enter your student-ID `Student01`
     * **KeyPair:** Select your existing SSH key created in **Section 1.2** above.
     * **ClientIP:** Enter your local public IP (e.g., `x.x.x.x/32`) to whitelist your access. You can use whatismyip.com or ip.me to find out the local public IP.
-    * **LicenseType:** Select `PAYG` (Pay-As-You-Go). Leave it as it is. 
+    * **LicenseType:** Select `BYOL` (Bring-Your-Own-License). Leave it as it is. 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft1.jpg width="400"/>
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft2.jpg width="400"/>
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft3.jpg width="400"/>
@@ -98,7 +98,13 @@ Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab
 
 3.  Complete the setup wizard.
 
-### 3.2 Interface Verification
+### 3.2 Activating FortiGate license
+1.  We will use the FortiFlex token for license activation. The token code will be shared with you during the session.
+2.  Establish SSH connection with FortiGate-VM using its assigned public IP. 
+
+
+
+### 3.3 Interface Verification
 Verify that the automation has mapped the interfaces correctly:
 * **Port 1 (WAN):** Connected to the Public Subnet (Gateway for Internet).
 * **Port 2 (LAN):** Connected to the Private Subnet (Gateway for TGW traffic).
