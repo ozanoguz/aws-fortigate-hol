@@ -173,6 +173,9 @@ Confirm that the egress policy for Ubuntu VMs is preconfigured for Internet acce
 ### 4.1 Testing Spoke Connectivity
 Each Spoke VPC has an Ubuntu "Web Server."
 1.  Find the Public IP of **Spoke1-VM** in the EC2 Console.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/spoke1vmeip.jpg width="600"/>
+
 2.  SSH into the instance using the SSH key pair. Username is `ubuntu`
 3.  Test internet access via the FortiGate:
     ```bash
@@ -180,10 +183,14 @@ Each Spoke VPC has an Ubuntu "Web Server."
     ```
     *Note: The instances use a "wait-for-FortiGate" script, so they only finish their setup once they successfully reach the Internet through the FortiGate.*
 
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/egresstest.jpg width="600"/>
+
 ### 4.2 Real-time Log Monitoring
 1.  On the FortiGate GUI, go to **Log & Report** > **Forward Traffic**.
 2.  Observe the traffic coming from source IPs `10.1.x.x` and `10.2.x.x`.
 3.  Verify that the **Egress-Internet-Access** policy is the one processing the traffic.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/egresslog.jpg width="600"/>
 
 ---
 
