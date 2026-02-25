@@ -126,17 +126,16 @@ Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtlicensevalid.jpg width="300"/>
 
-5.  sdfdsfs
-6.  sdgsg
-
-
-
-### 3.3 Interface Verification
+### 3.3 Interface and Policy Verification
 Verify that the automation has mapped the interfaces correctly:
 * **Port 1 (WAN):** Connected to the Public Subnet (Gateway for Internet).
 * **Port 2 (LAN):** Connected to the Private Subnet (Gateway for TGW traffic).
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtinterface.jpg width="600"/>
+
+Verify that egress (outgoing) policy is already created by the template. This is done for Ubuntu-VMs that they use Internet for specific tooling installation.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtexistingpolicy.jpg width="700"/>
 
 ---
 
