@@ -174,7 +174,7 @@ Confirm that the egress policy for Ubuntu VMs is preconfigured for Internet acce
 Each Spoke VPC has an Ubuntu "Web Server."
 1.  Find the Public IP of **Spoke1-VM** in the EC2 Console.
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/spoke1vmeip.jpg width="600"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/spokevm1eip.jpg width="600"/>
 
 2.  SSH into the instance using the SSH key pair. Username is `ubuntu`
 3.  Test internet access via the FortiGate:
