@@ -152,7 +152,21 @@ Confirm that the egress policy for Ubuntu VMs is preconfigured for Internet acce
 
 ### 4.2 Configure FortiGate SDN connector for AWS
 
-Navigate to "External Connectors"
+1.  Navigate to "External Connectors". Choose "AWS".
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtsdn1.jpg width="500"/>
+
+2.  Configure AWS SDN connector as shown below. "Use metadata IAM" and "Alternative resources" should be enabled.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtsdn2.jpg width="300"/>
+
+3.  Right click on SDN connector and choose "View Connector Objects"
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtsdn3.jpg width="300"/>
+
+4.  Verify that the SDN connector pulled related AWS objects such as InstanceID, tag key, subnet ID, VPC ID etc.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtsdn4.jpg width="600"/>
 
 ## 🧪 Section 5: Traffic Inspection Lab
 
