@@ -105,7 +105,7 @@ Wait until the stack status shows **CREATE_COMPLETE**. Navigate to the **Outputs
 
 ---
 
-## ⚙️ Section 3: FortiGate Configuration
+## ⚙️ Section 3: FortiGate Preparation
 
 ### 3.1 Initial Login
 1.  Open the **FGTURL** in your browser.
@@ -144,7 +144,17 @@ Confirm that the egress policy for Ubuntu VMs is preconfigured for Internet acce
 
 ---
 
-## 🧪 Section 4: Traffic Inspection Lab
+## 🧪 Section 4: FortiGate SDN Connector
+
+### 4.1 What is FortiGate SDN connector?
+
+**SDN Connector**: The FortiGate SDN connector automatically integrates with cloud platforms to pull dynamic attributes such as IP addresses, tags, or security groups. This ensures firewall policies stay up to date with real-time changes in the cloud environment, reducing manual effort and enabling adaptive security.
+
+### 4.2 Configure FortiGate SDN connector for AWS
+
+Navigate to "External Connectors"
+
+## 🧪 Section 5: Traffic Inspection Lab
 
 ### 4.1 Testing Spoke Connectivity
 Each Spoke VPC has an Ubuntu "Web Server."
