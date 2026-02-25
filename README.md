@@ -56,7 +56,21 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
 
 ## 🚀 Section 2: Deployment & Provisioning
 
-### 2.1 Deploying Lab Environment
+### 2.1 Subscribe to FortiGate BYOL AMI image
+
+1.  Subscribe FortiGate BYOL AMI image using the AWS marketplace. Click the link below:
+
+[FortiGate BYOL Marketplace Listing](https://aws.amazon.com/marketplace/pp/prodview-lvfwuztjwe5b2?applicationId=AWSMPContessa&ref_=beagle&sr=0-1)
+
+2.  Click "View purchase options" to continue with the subscription.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/amipurchaseoptions.jpg width="600"/>
+
+3.  Click "Subscribe" button at the bottom of the next page.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/amisubscribe.jpg width="600"/>
+
+### 2.2 Deploying Lab Environment
 1.  Log in to your **AWS Management Console** first.
 2.  Click to **Launch Stack** button below. This will redirect you to the AWS CloudFormation page.
 
@@ -77,7 +91,7 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
 
 5.  Click **Next** through the screens, and then **Create Stack**.
 
-### 2.2 Accessing the Resources
+### 2.3 Accessing the Resources
 Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab to find your credentials:
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cftcomplete.jpg width="500"/>
