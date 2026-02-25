@@ -179,7 +179,8 @@ Each Spoke VPC has an Ubuntu "Web Server."
 2.  SSH into the instance using the SSH key pair. Username is `ubuntu`
 3.  Test internet access via the FortiGate:
     ```bash
-    curl www.fortinet.com
+    ping 8.8.8.8
+    telnet www.fortinet.com 443
     ```
     *Note: The instances use a "wait-for-FortiGate" script, so they only finish their setup once they successfully reach the Internet through the FortiGate.*
 
