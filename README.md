@@ -21,19 +21,22 @@ The CloudFormation Template (CFT) automates a comprehensive Hub & Spoke environm
 
 ### 1.1 Access AWS Console
 
-Log in to the AWS console using the link below. You can use k8s_studentxx as username, password will be provided during the session.
+Log in to the AWS Management Console using the provided link. 
+
+Username: studentxx
+Password: Provided during the session
 
 [Access AWS Management Console](https://174296440058.signin.aws.amazon.com/console)
 
 ### 1.2 Create SSH Key Pair
 
-You must create an SSH key pair to securely access the EC2 instances (Spoke VMs) deployed in this lab.
+You will need an SSH key pair to securely access the EC2 instances (Spoke VMs).
 
-1. After logging in to the AWS Management Console**, ensure you are in the **Cape Town region (af-south-1)**.
+1. Ensure you are in the **Cape Town region (af-south-1)**.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/selectregion.jpg width="300"/>
 
-2. Search for "key pairs" in the top search box. Click "Key pairs" under search results.
+2. In the AWS Console, search for "key pairs" and select it.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/selectkeypairs.jpg width="400"/>
 
@@ -62,23 +65,23 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
 
 [FortiGate BYOL Marketplace Listing](https://aws.amazon.com/marketplace/pp/prodview-lvfwuztjwe5b2?applicationId=AWSMPContessa&ref_=beagle&sr=0-1)
 
-2.  Click "View purchase options" to continue with the subscription.
+2.  Click "View purchase options"
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/amipurchaseoptions.jpg width="600"/>
 
-3.  Click "Subscribe" button at the bottom of the next page.
+3.  Click "Subscribe" at the bottom of the page.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/amisubscribe.jpg width="600"/>
 
 ### 2.2 Deploying Lab Environment
-1.  Log in to your **AWS Management Console** first.
-2.  Click to **Launch Stack** button below. This will redirect you to the AWS CloudFormation page.
+1.  Log in to the **AWS Management Console**.
+2.  Click the **Launch Stack** button (1-Button Deployment). This redirects you to AWS CloudFormation.
 
 | **Description** | **1-Button Deployment** |
 |-----------------|--------------------------|
 | **FortiGate-VM Hub & Spoke Lab** | [![Launch Stack](https://github.com/40net-cloud/fortinet-aws-solutions/blob/master/FortiGate/Active-Passive-Multi-Zone/images/aws_cft_image.png)](https://console.aws.amazon.com/cloudformation/home?region=af-south-1#/stacks/create/review?templateURL=https://ftnt-cfts.s3.amazonaws.com/training/Cape_Town_HoL_CFT.yaml&stackName=FortiGate-Hub-and-Spoke-Lab) |
 
-3.  AWS Cape Town region (af-south-1) is automatically selected for you.
+3.  AWS Cape Town region (af-south-1) is preselected.
 4.  **Parameters to Configure:**
     * **Stack Name:** Enter your student-ID `Student01`
     * **KeyPair:** Select your existing SSH key created in **Section 1.2** above.
@@ -89,10 +92,10 @@ You must create an SSH key pair to securely access the EC2 instances (Spoke VMs)
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft3.jpg width="400"/>
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cft4.jpg width="500"/>
 
-5.  Click **Next** through the screens, and then **Create Stack**.
+5.  Click **Next** through the screens, then **Create Stack**.
 
 ### 2.3 Accessing the Resources
-Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab to find your credentials:
+Wait until the stack status shows **CREATE_COMPLETE**. Navigate to the **Outputs** tab for credentials:
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/cftcomplete.jpg width="500"/>
 
@@ -106,34 +109,36 @@ Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab
 
 ### 3.1 Initial Login
 1.  Open the **FGTURL** in your browser.
-2.  Log in using the Instance ID. You will be prompted to set a new password.
+2.  Log in using the Instance ID as the first password. Set a new password when prompted.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtprompt.jpg width="300"/>
 
 3.  Complete the setup wizard.
 
-### 3.2 Activating FortiGate license
-1.  We will use the FortiFlex token for license activation. The token code will be shared with you during the session.
+### 3.2 License Activation
+1.  Use the FortiFlex token (shared during the session) to activate the license via the GUI.
 2.  You can use the FortiGate web GUI to activate the license.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/flextoken.jpg width="500"/>
 
-3.  It will ask you to reboot, click "OK". Reboot can take 2 to 3 minutes.
+3.  Confirm reboot when prompted (takes 2–3 minutes).
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtreboot.jpg width="400"/>
 
-4.  You can check if FortiGate-VM has a valid serial number and is shown as licensed.
+4.  Verify that the FortiGate-VM shows a valid serial number and licensed status.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtlicensevalid.jpg width="300"/>
 
-### 3.3 Interface and Policy Verification
+### 3.3 Interface & Policy Verification
+
 Verify that the automation has mapped the interfaces correctly:
+
 * **Port 1 (WAN):** Connected to the Public Subnet (Gateway for Internet).
 * **Port 2 (LAN):** Connected to the Private Subnet (Gateway for TGW traffic).
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtinterface.jpg width="600"/>
 
-Verify that egress (outgoing) policy is already created by the template. This is done for Ubuntu-VMs that they use Internet for specific tooling installation.
+Confirm that the egress policy for Ubuntu VMs is preconfigured for Internet access.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtexistingpolicy.jpg width="700"/>
 
