@@ -108,13 +108,26 @@ Wait for the status to show **CREATE_COMPLETE**. Navigate to the **Outputs** tab
 1.  Open the **FGTURL** in your browser.
 2.  Log in using the Instance ID. You will be prompted to set a new password.
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtprompt.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtprompt.jpg width="300"/>
 
 3.  Complete the setup wizard.
 
 ### 3.2 Activating FortiGate license
 1.  We will use the FortiFlex token for license activation. The token code will be shared with you during the session.
-2.  Establish SSH connection with FortiGate-VM using its assigned public IP. 
+2.  You can use the FortiGate web GUI to activate the license.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/flextoken.jpg width="500"/>
+
+3.  It will ask you to reboot, click "OK". Reboot can take 2 to 3 minutes.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtreboot.jpg width="400"/>
+
+4.  You can check if FortiGate-VM has a valid serial number and is shown as licensed.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/fgtlicensevalid.jpg width="300"/>
+
+5.  sdfdsfs
+6.  sdgsg
 
 
 
