@@ -211,18 +211,18 @@ Each Spoke VPC has an Ubuntu "Web Server."
 
 1.  Create VIP objects for Spoke1 and Spoke2. Spoke1 HTTP will be exposed to Internet using TCP/8081 port, Spoke2 HTTP port will be exposed using TCP/8082 port.
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/vip1.jpg width="700"/>
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/vip2.jpg width="700"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/vip1.jpg width="600"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/vip2.jpg width="600"/>
 
 2.  Create a firewall policy to enable Ingress inspection.
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresspolicy1.jpg width="600"/>
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresspolicy2.jpg width="600"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresspolicy1.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresspolicy2.jpg width="400"/>
 
 3.  Initiate the traffic using your web browser
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresstraffic1.jpg width="700"/>
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresstraffic2.jpg width="700"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresstraffic1.jpg width="400"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresstraffic2.jpg width="400"/>
 
 
 4.  Verify traffic logs by checking the FortiGate GUI.
