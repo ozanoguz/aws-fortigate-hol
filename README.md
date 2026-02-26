@@ -231,20 +231,7 @@ Each Spoke VPC has an Ubuntu "Web Server."
 
 ---
 
-## 🔐 Section 5: Security Policy Automation
-
-### 5.1 Blocking Malicious Categories
-1.  Navigate to **Policy & Objects** > **Firewall Policy**.
-2.  Edit the **Egress-Internet-Access** policy.
-3.  Enable **Web Filter** and select the `default` profile.
-4.  From the Spoke VM, try to access a restricted site. You should see the FortiGate replacement message.
-
-### 5.2 Traffic Flow Analysis
-Because of the **Transit Gateway Route Tables**, the FortiGate sees the original IP of the Spoke instance, allowing for granular, identity-based security policies.
-
----
-
-## 🧹 Section 6: Resource Cleanup
+## 🧹 Section 5: Resource Cleanup
 
 To prevent unnecessary AWS costs, please delete the environment when finished:
 1.  Go to the **CloudFormation** console.
