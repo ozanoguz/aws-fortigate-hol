@@ -170,7 +170,7 @@ Confirm that the egress policy for Ubuntu VMs is preconfigured for Internet acce
 
 ## 🧪 Section 5: Traffic Inspection Lab
 
-### 4.1 Testing Spoke Connectivity
+### 4.1 Testing Spoke to Internet Connectivity (South to North - Egress)
 Each Spoke VPC has an Ubuntu "Web Server."
 1.  Find the Public IP of **Spoke1-VM** in the EC2 Console.
 
@@ -192,6 +192,21 @@ Each Spoke VPC has an Ubuntu "Web Server."
 3.  Verify that the **Egress-Internet-Access** policy is the one processing the traffic.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/egresslog.jpg width="700"/>
+
+### 4.2 Testing Spoke to Spoke Connectivity (East/West)
+
+1.  Create a firewall policy to enable East/West inspection.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest1.jpg width="600"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest2.jpg width="600"/>
+
+2.  Initiate ICMP and HTTP traffic from Spoke-1 (10.1.0.100) to Spoke-2 (10.2.0.100)
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest3.jpg width="600"/>
+
+3.  Verify traffic logs by checking the FortiGate GUI
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest4.jpg width="600"/>
 
 ---
 
