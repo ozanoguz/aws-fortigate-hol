@@ -202,11 +202,11 @@ Each Spoke VPC has an Ubuntu "Web Server."
 
 2.  Initiate ICMP and HTTP traffic from Spoke-1 (10.1.0.100) to Spoke-2 (10.2.0.100)
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest3.jpg width="600"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest3.jpg width="400"/>
 
 3.  Verify traffic logs by checking the FortiGate GUI
 
-<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest4.jpg width="600"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest4.jpg width="700"/>
 
 ---
 
