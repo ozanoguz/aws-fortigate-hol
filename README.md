@@ -13,6 +13,8 @@ The CloudFormation Template (CFT) automates a comprehensive Hub & Spoke environm
 * **Workload Spokes:** Two separate VPCs (Spoke 1 & Spoke 2) running Ubuntu web servers.
 * **Traffic Flow:** All egress and east/west traffic from Spoke instances is routed through the TGW to the FortiGate's private interface for security filtering.
 
+## Lab Diagram
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/AWS_HoL_Topology.jpg width="300"/>
 
 
 ---
