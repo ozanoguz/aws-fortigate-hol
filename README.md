@@ -186,10 +186,9 @@ Each Spoke VPC has an Ubuntu "Web Server."
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/egresstest.jpg width="500"/>
 
-### 4.2 Real-time Log Monitoring
-1.  On the FortiGate GUI, go to **Log & Report** > **Forward Traffic**.
-2.  Observe the traffic coming from source IPs `10.1.x.x` and `10.2.x.x`.
-3.  Verify that the **Egress-Internet-Access** policy is the one processing the traffic.
+4.  On the FortiGate GUI, go to **Log & Report** > **Forward Traffic**.
+5.  Observe the traffic coming from source IPs `10.1.x.x` and `10.2.x.x`.
+6.  Verify that the **Egress-Internet-Access** policy is the one processing the traffic.
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/egresslog.jpg width="700"/>
 
@@ -207,6 +206,28 @@ Each Spoke VPC has an Ubuntu "Web Server."
 3.  Verify traffic logs by checking the FortiGate GUI
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/eastwest4.jpg width="700"/>
+
+### 4.2 Testing Internet to Spoke Connectivity (North to South - Ingress)
+
+1.  Create VIP objects for Spoke1 and Spoke2. Spoke1 HTTP will be exposed to Internet using TCP/8081 port, Spoke2 HTTP port will be exposed using TCP/8082 port.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/vip1.jpg width="700"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/vip2.jpg width="700"/>
+
+2.  Create a firewall policy to enable Ingress inspection.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresspolicy1.jpg width="600"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresspolicy2.jpg width="600"/>
+
+3.  Initiate the traffic using your web browser
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresstraffic1.jpg width="700"/>
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresstraffic2.jpg width="700"/>
+
+
+4.  Verify traffic logs by checking the FortiGate GUI.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/ingresslogs.jpg width="700"/>
 
 ---
 
