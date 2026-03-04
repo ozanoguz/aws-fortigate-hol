@@ -25,7 +25,7 @@ The CloudFormation Template (CFT) automates a comprehensive Hub & Spoke environm
 
 Log in to the AWS Management Console using the provided link. 
 
-Username: studentxx
+Username: studentxpert
 Password: Provided during the session
 
 [Access AWS Management Console](https://174296440058.signin.aws.amazon.com/console)
