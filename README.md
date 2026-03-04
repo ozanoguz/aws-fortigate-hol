@@ -23,12 +23,11 @@ The CloudFormation Template (CFT) automates a comprehensive Hub & Spoke environm
 
 ### 1.1 Access AWS Console
 
-Log in to the AWS Management Console using the provided link. 
-
-Username: studentxpert
-Password: Provided during the session
+Log in to the AWS Management Console using the provided link. Lab credentials are below. 
 
 [Access AWS Management Console](https://174296440058.signin.aws.amazon.com/console)
+
+[Lab Credentials](https://docs.google.com/spreadsheets/d/16iNuSOcANJ1hb94C9mBLWvl8QQpWEAeJ/edit?usp=drive_link&ouid=106836330906893163905&rtpof=true&sd=true)
 
 ### 1.2 Create SSH Key Pair
 
