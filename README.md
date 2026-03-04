@@ -75,6 +75,14 @@ You will need an SSH key pair to securely access the EC2 instances (Spoke VMs).
 
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/amisubscribe.jpg width="600"/>
 
+4. "Subscribe" button will be grayed out for some minutes.
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/amisubscribe1.jpg width="700"/>
+
+5. Wait until you see the subscription is completed as below:
+
+<img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/amisubscribe2.jpg width="800"/>
+
 ### 2.2 Deploying Lab Environment
 1.  Log in to the **AWS Management Console**.
 2.  Click the **Launch Stack** button (1-Button Deployment). This redirects you to AWS CloudFormation.
