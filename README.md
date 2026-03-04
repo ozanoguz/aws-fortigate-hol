@@ -187,7 +187,11 @@ Each Spoke VPC has an Ubuntu "Web Server."
 <img src=https://github.com/ozanoguz/aws-fortigate-hol/blob/main/images/spokevm1eip.jpg width="600"/>
 
 2.  SSH into the instance using the SSH key pair. Username is `ubuntu`
-3.  Test internet access via the FortiGate:
+3.  Windows users can use the link below for PEM to PPK conversion:
+
+[Converting PEM file to PPK format](https://puttygen.com/convert-pem-to-ppk)
+
+4.  Test internet access via the FortiGate:
     ```bash
     ping 8.8.8.8
     telnet www.fortinet.com 443
