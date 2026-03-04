@@ -189,7 +189,7 @@ Each Spoke VPC has an Ubuntu "Web Server."
 2.  SSH into the instance using the SSH key pair. Username is `ubuntu`
 3.  Windows users can use the link below for PEM to PPK conversion:
 
-[Converting PEM file to PPK format](https://puttygen.com/convert-pem-to-ppk)
+[Convert PEM file to PPK format](https://puttygen.com/convert-pem-to-ppk)
 
 4.  Test internet access via the FortiGate:
     ```bash
